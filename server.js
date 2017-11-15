@@ -24,6 +24,10 @@ app.get('/:time', (req, res) => {
   res.send(result);
 });
 
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/views/index.html');
+});
+
 app.listen(port, () => {
   console.log(`Server is up and running on port ${port}.`);
 });
